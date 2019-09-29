@@ -1,5 +1,10 @@
 function person (name, age) {
-	console.log(name, age);
+
+	this.name = name;
+  this.age = age;
+  this.result = function () {
+  	console.log(this.name, this.age);
+  }
 }
 
-person("John", 20);
+new person("John", 20).result();
